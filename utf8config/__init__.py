@@ -7,6 +7,11 @@ from collections import OrderedDict
 from sfm import nameddict
 from six import integer_types, string_types
 
+__version__ = "0.0.1"
+__short_description__ = "A utf8 charset config file parser"
+__license__ = "MIT"
+__author__ = "Sanhe Hu"
+
 
 def is_same_instance(l):
     """Check whether if items in list is same type or None.

@@ -5,6 +5,8 @@ python:
   - "3.4"
   - "3.5"
 install:
+  - pip install sfm==0.0.4
+  - pip install dataIO==0.0.2
   - pip install . # Install it self
   - pip install --upgrade pytest
 script: py.test

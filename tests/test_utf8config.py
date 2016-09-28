@@ -9,7 +9,8 @@ from utf8config import (
     is_same_instance, load_value, dump_value,
     extract_comment, remove_post_comment,
     Field, Section, Config,
-) 
+)
+
 
 def test_is_same_instance():
     with raises(Exception):
