@@ -228,12 +228,12 @@ class TestSection:
 class TestConfig:
 
     def test_load_and_dump(self):
-        text = textfile.read("config.txt")
+        text = textfile.read(__file__.replace("test_utf8config.py", "config.txt"))
         config = Config.load(text)
         assert config.values()[0].name == "DEFAULT"
         assert config.values()[1].name == "TEST"
 
-        textfile.write(config.dump(), "config_new.txt")
+        textfile.write(config.dump(), __file__.replace("test_utf8config.py", "config_new.txt"))
 
 
 if __name__ == "__main__":
