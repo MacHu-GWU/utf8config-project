@@ -1,13 +1,21 @@
 language: python
+
 python:
   - "2.7"
-  - "3.3"
   - "3.4"
   - "3.5"
+  - "3.6"
+
 install:
-  - pip install sfm==0.0.4
-  - pip install dataIO==0.0.2
-  - pip install six
-  - pip install . # Install it self
-  - pip install --upgrade pytest
-script: py.test
+  - pip install --editable . # Install it self
+  - pip install -r requirements-test.txt # Install test dependencies
+  - pip install codecov # Install coveralls
+
+script:
+  - pytest tests --cov=utf8config # Run unittest
+
+notifications:
+  email: false # Mute email notification
+
+after_success:
+  - codecov # travis-ci will transfer data to codecov after success

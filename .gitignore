@@ -1,5 +1,11 @@
-# User Setting
-tests/config_new.txt
+# User Settings
+utf8config_venv/
+utf8config.egg-info/
+utf8config-*/
+index.rst
+
+tests/config_no_comment.txt
+tests/config_with_comment.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

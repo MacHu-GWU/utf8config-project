@@ -1,3 +1,4 @@
+### DEFAULT is the default section
 ### DEFAULT是默认Section
 [DEFAULT]
 localhost = 192.168.0.1 # IP地址, 默认 192.168.0.1
@@ -10,41 +11,44 @@ connection_timeout = 60 # 单位是秒, 默认60
 # 用Configuration.load()看看会不会成功吧
 
 [TEST]
+# Single Value
 # 以下是单值项
 # 即非列表的值
-int = 123
-int_pos = +123
-int_neg = -123
-float = 3.14
-float_pos = +3.14
-float_neg = -3.14
-str = Hello World!
-str_quote = 'Good Boy'
-str_double_quote = "Bad Boy"
-str_quote_in_quote = '"Boy"'
-str_int = '123'
-str_float = '3.14'
-str_bool = 'True'
-str_path = C:\用户\管理员
-str_utf8 = 中文
-bool_true = True
-bool_yes = Yes
-bool_false = False
-bool_no = No
-none_none = None
-none_null = null 
-none = 
+value = 100
+int = 123 # 123
+int_pos = +123 # 123
+int_neg = -123 # -123
+float = 3.14 # 3.14
+float_pos = +3.14 # 3.14
+float_neg = -3.14 # -3.14
+str = Hello World! # str "Hello World!"
+str_quote = 'Good Boy' # str "Good Boy"
+str_double_quote = "Bad Boy" # str "Bad Boy"
+str_quote_in_quote = '"Boy"' # str '"Boy"'
+str_int = '123' # str "123"
+str_float = '3.14' # str "3.14"
+str_bool = 'True' # str "True"
+str_path = C:\用户\管理员 # str "C:\用户\管理员"
+str_utf8 = 中文 # str "中文"
+bool_true = True # True
+bool_yes = Yes # True
+bool_false = False # False
+bool_no = No # No
+none_none = None # None
+none_null = null # None
+none = # None
 
+# List Value
 # 以下是各种列表
-empty_list = ,
-int_list = 1, -2, 3
-int_none_list = , -2,3
-float_list = 1.1, -2.2, 3.3
-float_none_list = , -2.2,3.3
-str_list = a, b, c
-str_single_quote_list = '1', '2', '3'
-str_double_quote_list = "1", "2", "3"
-str_path_list = C:\windows, C:\中文
-str_special_list = a, '1', '3.14', "True", "no", ,"None"
-bool_list = True, False
-bool_yes_no_list = Yes, No
+empty_list = , # Empty list []
+int_list = 1, -2, 3 # [1, -2, 3]
+int_none_list = , -2,3 # [None -2, 3]
+float_list = 1.1, -2.2, 3.3 # [1.1, -2.2, 3.3]
+float_none_list = , -2.2,3.3 # [None -2.2, 3.3]
+str_list = a, b, c # ["a", "b", "c"]
+str_single_quote_list = '1', '2', '3' # ["1", "2", "3"]
+str_double_quote_list = "1", "2", "3" # ["1", "2", "3"]
+str_path_list = C:\windows, C:\中文 # ["C:\windows", "C:\中文"]
+str_special_list = a, '1', '3.14', "True", "no", ,"None" # ["a", "1", "3.14", "True", "no", "None"]
+bool_list = True, False # [True, False]
+bool_yes_no_list = Yes, No # [True, False]
